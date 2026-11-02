@@ -1,0 +1,709 @@
+LUBECO
+
+
+
+Calculs et
+sécurité laser
+Cahier de révision PCSL
+Les cinq fiches réunies dans un document structuré, avec des formules présentées en fractions,
+racines et exposants, selon le modèle fourni.
+
+
+
+
+Sommaire
+Repères de calcul                                                                                    2
+
+1 VLE : limites d’exposition                                                                         3
+
+2 Divergence et facteur M2                                                                           7
+
+3 DNDO : distance nominale de danger oculaire                                                        8
+
+4 Sécurité d’un balayage galvo                                                                      10
+
+5 Protection oculaire : échelons LB1 à LB10                                                         12
+
+Corrections et références                                                                           14
+
+
+
+
+   Mode d’emploi
+   Chaque chapitre précise les grandeurs, les unités et les hypothèses. Les exemples servent à
+   l’entraînement. Pour une intervention, les données réelles de la machine et les conditions
+   d’exposition complètent le calcul.
+
+Les tableaux et formulations erronés des fiches initiales ont été rectifiés. Le relevé des principales
+corrections et les références figurent à la fin du cahier. Les tableaux VLE présentés sont des extraits
+pédagogiques avec leur domaine d’application.
+LUBECO | RÉVISIONS PCSL                                                              Calculs et sécurité laser
+
+
+Repères de calcul
+Une grandeur, un symbole, une unité
+ Symbole       Grandeur                                                              Unité usuelle
+
+ P             Puissance optique                                                     W
+ Q             Énergie d’une impulsion                                               J
+ E             Éclairement énergétique (irradiance)                                  W/m2
+ H             Exposition énergétique (fluence)                                      J/m2
+ S             Surface du faisceau ou de l’ouverture considérée                      m2
+ t, τ          Durée d’exposition, durée d’impulsion                                 s
+ f             Fréquence des impulsions de la source                                 Hz
+ λ             Longueur d’onde                                                       m ou nm selon formule
+ d, a          Diamètre du faisceau                                                  m
+ w0            Rayon au col du faisceau (waist)                                      m
+ θ, ϕ          Demi-angle, angle total de divergence                                 rad
+
+                                                   2
+                                                   d              P             Q
+                                          S=π              E=            H=
+                                                   2              S             S
+
+Pour une puissance constante pendant une durée t :
+
+                                                         P ×t
+                                         H =E×t=                   Pmoy = Q × f
+                                                           S
+
+Conversions à effectuer avant le calcul
+
+ 1 kW = 103 W                                                   1 mJ = 10−3 J
+ 1 kHz = 103 Hz                                                 1 ns = 10−9 s
+ 1 mm = 10−3 m                                                  1 mrad = 10−3 rad
+ 1 cm2 = 10−4 m2                                                1 J/cm2 = 104 J/m2
+
+     Lecture sur la calculatrice : la barre de fraction regroupe tout le numérateur et tout le
+     dénominateur. La racine porte sur tout ce qui se trouve sous son trait. Le facteur M 2 se saisit
+     directement avec la valeur annoncée par le fabricant.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                              2
+LUBECO | RÉVISIONS PCSL                                                                  Calculs et sécurité laser
+
+
+1      VLE : limites d’exposition
+Choisir la bonne limite puis comparer les mêmes grandeurs
+
+
+1.1. Signification
+La VLE est la valeur limite d’exposition réglementaire applicable aux travailleurs. Elle dépend de la
+longueur d’onde, de la durée, de l’organe exposé et des caractéristiques de la source. L’EMP désigne
+l’exposition maximale permise dans les référentiels de sécurité laser. Le référentiel et son édition
+accompagnent toute valeur retenue. Une VLE exprimée en J/m2 se compare à H. Une VLE exprimée
+en W/m2 se compare à E.
+
+                                                                Hreelle          Ereel
+                                     Rapport d’exposition =                 ou
+                                                                HVLE             EVLE
+
+Un rapport inférieur ou égal à 1 satisfait le critère étudié. La conclusion d’ensemble rassemble tous les
+critères applicables, les incertitudes et les scénarios prévisibles.
+
+
+1.2. Trois vérifications pour les impulsions répétées
+Impulsion isolée. Chaque impulsion respecte la limite associée à sa durée τ .
+
+
+                                                    Himp ≤ HVLE (τ )
+
+Exposition cumulée. L’énergie reçue pendant un intervalle T , y compris les sous-groupes pertinents,
+respecte la limite de cet intervalle.
+
+
+                                                  Htotal (T ) ≤ HVLE (T )
+
+Cumul thermique. Lorsque cette règle s’applique, la limite par impulsion est corrigée en fonction du
+nombre d’impulsions N .
+
+                                                  1
+                                 Cp = N −0,25 = √
+                                                4
+                                                             Hlim,imp = Cp × HVLE (τ )
+                                                  N
+
+Les impulsions situées dans une durée inférieure à Tmin sont traitées selon la règle de regroupement du
+tableau 2.6 de l’annexe II. À 1064 nm, Tmin = 50 µs. Le comptage utilisé pour le cumul thermique tient
+compte de ce regroupement. Références : [1], annexe II, et [2], tableaux 2.2 à 2.6.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                                 3
+LUBECO | RÉVISIONS PCSL                                                             Calculs et sécurité laser
+
+
+1.3. VLE oculaires : visible et proche infrarouge
+Extrait pour 10−9 s ≤ t < 10 s. Les valeurs ci-dessous sont des expositions énergétiques en J/m2 .
+L’ouverture de référence est de 7 mm. Aux frontières communes, retenir la valeur la plus restrictive
+applicable.
+
+ λ (nm)                    Durée t (s)                     HVLE (J/m2 )
+
+ 400 à 700                 10−9 à 18 × 10−6                5 × 10−3 CE
+ 400 à 700                 18 × 10−6 à 10                  18 t0,75 CE
+ 700 à 1050                10−9 à 18 × 10−6                5 × 10−3 CA
+ 700 à 1050                18 × 10−6 à 10                  18 t0,75 CA CE
+ 1050 à 1400               10−9 à 50 × 10−6                5 × 10−2 CC CE
+ 1050 à 1400               50 × 10−6 à 10                  90 t0,75 CC CE
+
+Application à 1064 nm, source ponctuelle : CA = 5, CC = 1 et CE = 1.
+
+
+                                       HVLE = 90 × t0,75    pour 50 µs ≤ t < 10 s
+
+Exemple de calcul pour t = 0, 25 s :
+
+
+                                         HVLE = 90 × (0, 25)0,75 ≈ 31, 82 J/m2
+
+La durée de 0,25 s est ici une donnée d’exercice. Pour un rayonnement infrarouge, la durée retenue
+vient du scénario d’exposition et des dispositifs de sécurité.
+
+
+1.4. Expositions longues : 10 ≤ t ≤ 30 000 s
+Pour une petite source (α < 1, 5 mrad), les limites thermiques oculaires sont :
+
+ Plage spectrale          EVLE (W/m2 )
+
+ 400 à 700 nm             10
+ 700 à 1400 nm            10 CA CC
+ 1400 nm à 1 mm           1000 (ouverture adaptée à la plage spectrale)
+
+De 400 à 600 nm, le critère photochimique s’ajoute au critère thermique : HVLE = 100 CB J/m2 pour
+10 à 100 s, puis EVLE = CB W/m2 au-delà, avec le champ d’acceptance prescrit. Les sources étendues
+se traitent avec CE , T2 et les conditions du tableau 2.3.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                            4
+LUBECO | RÉVISIONS PCSL                                                                        Calculs et sécurité laser
+
+
+1.5. UV et infrarouge lointain : repères corrigés
+UV de 180 à 400 nm, 10−9 ≤ t < 10 s. Pour 180 à 302 nm, HVLE = 30 J/m2 . Entre 303 et 314 nm,
+la valeur la plus faible entre le seuil du tableau ci-dessous et 5600 t0,25 J/m2 s’applique.
+
+
+                                    λ (nm)         303    304    305      306     307    308
+                                H (J/m2 )           40     60    100      160     250    400
+
+                                    λ (nm)         309    310    311      312     313    314
+                                H (J/m2 )          630   1000   1600    2500    4000    6300
+
+
+Pour 315 à 400 nm :
+
+
+                                                  HVLE = 5600 × t0,25   [J/m2 ]
+
+Pour les durées de 10 à 30 000 s, les seuils UV du tableau restent applicables et la limite à 315–400 nm
+devient 104 J/m2 . La sélection aux frontières et les ouvertures de mesure se font avec l’annexe II. IR
+au-delà de 1400 nm, 10−9 ≤ t < 10 s.
+
+ λ (nm)                        Durée (s)                         HVLE (J/m2 )
+
+ 1400 à 1500                   10−9 à 10−3                       1000
+ 1400 à 1500                   10−3 à 10                         5600 t0,25
+ 1500 à 1800                   10−9 à 10                         10 000
+ 1800 à 2600                   10−9 à 10−3                       1000
+ 1800 à 2600                   10−3 à 10                         5600 t0,25
+ 2600 à 106                    10−9 à 10−7                       100
+ 2600 à 106                    10−7 à 10                         5600 t0,25
+
+   Ces extraits couvrent les durées à partir de 1 ns. Les impulsions plus courtes, les expositions
+   cutanées, les ouvertures de mesure et les notes particulières se consultent dans les tableaux
+   complets 2.2 à 2.6.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                                       5
+LUBECO | RÉVISIONS PCSL                                                                    Calculs et sécurité laser
+
+
+1.6. Facteurs de correction
+Dans ces expressions, λ se saisit en nanomètres et α en milliradians.
+                                                  
+                                                  1                    λ < 700
+                                                  
+                                                  
+                                       CA =           100,002(λ−700)    700 ≤ λ < 1050
+                                                  
+                                                  5
+                                                  
+                                                                        1050 ≤ λ ≤ 1400
+
+                                                   1                    400 ≤ λ ≤ 450
+                                                  (
+                                       CB =
+                                                   100,02(λ−450)        450 < λ ≤ 700
+                                                  
+                                                  1                     700 ≤ λ ≤ 1150
+                                                  
+                                                  
+                                       CC =           100,018(λ−1150)    1150 < λ < 1200
+                                                  
+                                                  8
+                                                  
+                                                                         1200 ≤ λ ≤ 1400
+
+                                                    1                α ≤ 1, 5
+                                                  
+                                                  
+                                                   α
+                                                  
+                                                  
+                                                                     1, 5 < α ≤ 100
+                                                  
+                                       CE =           1, 5
+                                                          α2
+                                                  
+                                                  
+                                                                     α > 100
+                                                  
+                                                  
+                                                      1, 5 × 100
+                                                  
+
+
+CA et CC corrigent la dépendance spectrale du risque thermique rétinien. CB concerne le risque
+photochimique. CE tient compte de la dimension angulaire apparente de la source pour les expressions
+qui l’utilisent. Pour les expositions longues à une source étendue :
+
+                                                             α−1,5
+                                        T2 = 10 × 10 98,5            pour 1, 5 < α < 100
+
+T2 = 10 s pour α ≤ 1, 5 mrad ; T2 = 100 s pour α ≥ 100 mrad.
+
+   L’angle apparent α décrit la taille de la source vue par l’œil. La divergence ϕ décrit l’élargissement
+   du faisceau pendant sa propagation. Chacun intervient dans son propre calcul.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                                   6
+LUBECO | RÉVISIONS PCSL                                                              Calculs et sécurité laser
+
+
+2      Divergence et facteur M2
+Relier le rayon au col du faisceau à son ouverture angulaire
+Le facteur M 2 caractérise la qualité de propagation. Une valeur égale à 1 correspond au faisceau
+gaussien idéal. La valeur fournie par le fabricant entre directement dans la formule.
+
+
+2.1. Données nécessaires
+λ : longueur d’onde en mètres ; w0 : rayon au col du faisceau en mètres ; M 2 : facteur sans unité. Le
+col est la section où le faisceau est le plus fin. Sa position et la convention de diamètre doivent être
+identifiées.
+
+                                                  D0         M2 × λ
+                                         w0 =           θ=               ϕ = 2θ
+                                                  2          π × w0
+
+θ est le demi-angle. ϕ est l’angle total, celui utilisé dans le modèle de DNDO du chapitre suivant.
+Pour un faisceau réel, les données de rayon et de divergence doivent employer une convention cohérente
+(notamment la définition par seconds moments utilisée avec M 2 ).
+
+
+2.2. Exemple pas à pas
+λ = 1064 nm ; M 2 = 1, 5 ; diamètre au col D0 = 2 mm.
+
+                                             1, 5 × (1064 × 10−9 )
+                                       θ=                          ≈ 0, 000508 rad
+                                                   π × 0, 001
+
+
+                                          θ ≈ 0, 508 mrad      ϕ ≈ 1, 016 mrad
+
+Saisie :     1,5 × (1064 × 10ˆ(-9)) ÷ (π × 0,001)
+
+
+2.3. Utilisation après une tête optique
+Une lentille modifie le diamètre et la divergence. Le calcul de sécurité utilise les caractéristiques du
+faisceau après les éléments optiques réellement présents. Les données du fabricant ou une caractérisation
+du faisceau permettent de fixer le col, son diamètre et la divergence utiles au scénario.
+
+    Dans l’exemple, M 2 = 1, 5 signifie que le multiplicateur est 1,5. Le carré fait partie du nom de
+    ce paramètre.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                             7
+LUBECO | RÉVISIONS PCSL                                                                   Calculs et sécurité laser
+
+
+3      DNDO : distance nominale de danger oculaire
+Une distance calculée pour un faisceau et un scénario définis
+La DNDO repère la distance à laquelle l’exposition du faisceau direct atteint la limite oculaire retenue.
+Elle participe à la définition de la zone nominale de danger, avec les directions de tir et les réflexions
+possibles.
+
+
+3.1. Modèle géométrique de la photo
+On suppose un faisceau divergent de profil uniforme, dont le diamètre augmente selon d(z) = a + ϕz.
+a est le diamètre à l’origine de distance et ϕ la divergence totale en radians.
+                                                       s
+                                                1            4×P
+                                                                              !
+                                          DNDO = ×                  −a
+                                                ϕ          π × EMPE
+
+P en W ; EMPE en W/m2 ; a en m ; résultat en m. Une VLE oculaire en W/m2 peut occuper la place
+de la limite dans ce calcul lorsque c’est le référentiel retenu. Pour une impulsion :
+                                                       s
+                                                1            4×Q
+                                                                              !
+                                          DNDO = ×                  −a
+                                                ϕ          π × EMPH
+
+Q en J et EMPH en J/m2 . Pour un train d’impulsions, chaque critère pertinent est évalué et la distance
+la plus contraignante est retenue.
+
+
+3.2. Exemple de manipulation de la formule
+Données fictives : P = 1 W ; EMPE = 10 W/m2 ; a = 0, 002 m ; ϕ = 0, 001 rad.
+                                                   s
+                                           1            4×1
+                                                                         !
+                                 DNDO =        ×              − 0, 002       ≈ 354, 8 m
+                                        0, 001         π × 10
+
+Saisie :
+                 √
+(1 ÷ 0,001) × ( ((4 × 1) ÷ (π × 10)) - 0,002) Si le calcul donne une distance négative, le
+modèle indique déjà une exposition sous la limite à son origine : la distance de danger de ce modèle est
+ramenée à zéro.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                                  8
+LUBECO | RÉVISIONS PCSL                                                                Calculs et sécurité laser
+
+
+3.3. Choisir le modèle de propagation
+La formule de la photo correspond au modèle linéaire d(z) = a+ϕz. Une autre approximation courante,
+avec l’origine au col, utilise :
+                                                             q
+                                                    d(z) =       d20 + (ϕz)2
+
+Pour un profil uniforme associé à cette loi :
+                                                             s
+                                                         1          4P
+                                                  DNDO =                − d20
+                                                         ϕ       π EMPE
+
+Ces deux expressions traduisent des hypothèses de propagation différentes. Le diamètre, le profil et le
+point d’origine sont choisis ensemble.
+
+
+3.4. Profil gaussien et faisceau focalisé
+Pour un profil gaussien avec un diamètre défini à 1/e2 , l’irradiance au centre est :
+
+                                                                    8P
+                                                      Ecentre =
+                                                                    πd2
+
+La comparaison de sécurité tient compte de la moyenne sur l’ouverture réglementaire. La formule à
+coefficient 4 correspond à une distribution uniforme sur le disque. Un faisceau convergent puis divergent
+se traite en repérant son foyer et les zones où l’exposition dépasse la limite.
+
+ Résultat du scénario             Interprétation
+
+ Distance inférieure à la         Dépassement de la limite pour l’exposition directe étudiée. La zone est
+ DNDO                             organisée et protégée en conséquence.
+ Distance au-delà de la           Limite respectée pour ce faisceau, cette durée et ces hypothèses. Les autres
+ DNDO                             trajets, réflexions et aides optiques font l’objet de leur propre évaluation.
+
+   Sur le terrain : la zone de danger suit les trajectoires possibles du rayonnement. Une valeur
+   de DNDO calculée sur l’axe sert de donnée à cette analyse ; le périmètre final tient compte de
+   l’environnement et des protections collectives.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                                   9
+LUBECO | RÉVISIONS PCSL                                                           Calculs et sécurité laser
+
+
+4      Sécurité d’un balayage galvo
+Calculer le passage puis examiner les répétitions
+Une tête galvo déplace le faisceau. Un point peut recevoir des expositions brèves à chaque passage. La
+durée de passage dépend de la vitesse locale du faisceau au niveau de l’exposition étudiée.
+
+
+4.1. Vitesse de balayage
+Pour un motif parcouru à vitesse constante, de longueur totale L et répété à la fréquence fm :
+
+
+                                                         v = L × fm
+
+L en mm ; fm en Hz ; v en mm/s. Un carré de 10 mm de côté a un périmètre de 40 mm. À 100
+motifs/s, v = 4000 mm/s. Aux virages et retournements, utiliser la vitesse locale réelle.
+
+
+4.2. Durée de traversée d’une ouverture
+Pour un passage centré, rectiligne, à vitesse constante, la durée géométrique entre le premier et le
+dernier contact avec une ouverture de diamètre D est :
+
+                                                                 D+d
+                                                    tpassage ≈
+                                                                  v
+
+Les trois grandeurs sont prises dans le même plan. Avec D = 7 mm, d = 1 mm et v = 4000 mm/s :
+
+                                                         7+1
+                                            tpassage =        = 0, 002 s = 2 ms
+                                                         4000
+
+L’ouverture de 7 mm concerne les évaluations oculaires visibles et proches infrarouges correspondantes.
+La durée calculée est une enveloppe de passage : l’énergie réellement interceptée dépend du
+recouvrement entre faisceau et ouverture.
+
+
+4.3. Nombre de passages
+Si chaque motif traverse une fois l’ouverture :
+
+
+                                                   Npassages ≈ fm × T
+
+La géométrie du motif et sa phase déterminent le comptage réel ; pour une borne prudente, inclure
+tout passage possible sur l’intervalle. T vient du scénario, avec la durée d’arrêt des protections lorsque
+celle-ci est justifiée.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                         10
+LUBECO | RÉVISIONS PCSL                                                              Calculs et sécurité laser
+
+
+4.4. Énergie reçue à travers l’ouverture
+L’exposition moyenne sur l’ouverture de surface SA s’obtient à partir de l’énergie effectivement transmise
+à travers cette ouverture :
+
+                                                       2
+                                                 D                    Qinterceptee
+                                                  
+                                          SA = π               HA =
+                                                 2                        SA
+
+Pour une puissance constante, une borne supérieure consiste à considérer que toute la puissance traverse
+l’ouverture pendant toute la durée de passage :
+
+                                                            P × tpassage
+                                                    HA ≤
+                                                               SA
+
+Avec D = 0, 007 m : SA ≈ 3, 85 × 10−5 m2 . Cette majoration peut être utile à un premier examen ;
+une estimation précise intègre la puissance interceptée au cours du passage.
+
+
+4.5. Source pulsée et motif galvo
+Le motif et la source possèdent chacun leur fréquence : fm pour les passages et f pour les impulsions
+optiques. Pendant un passage, l’estimation du nombre d’impulsions est :
+
+
+                                                  nimp/pass ≈ f × tpassage
+
+Le comptage exact dépend de la synchronisation. Pour la sécurité, on considère la phase la plus
+exposante. Les impulsions individuelles, les groupes, l’exposition cumulée et la correction thermique
+sont évalués selon le chapitre 1.
+
+
+4.6. Conclusion de l’analyse
+L’évaluation regroupe le balayage normal, les zones de ralentissement, les passages répétés et l’arrêt
+éventuel des miroirs. En mode dégradé, le délai de coupure du laser fixe la durée d’exposition à
+considérer lorsque cette fonction de sécurité est démontrée.
+
+   Le balayage peut réduire le temps passé sur un point. La maîtrise du risque repose sur l’ensemble
+   : exposition calculée, confinement ou écrans adaptés, contrôle des accès, fonctions de sécurité et
+   protections individuelles sélectionnées pour les rayonnements accessibles.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                            11
+LUBECO | RÉVISIONS PCSL                                                          Calculs et sécurité laser
+
+
+5      Protection oculaire : échelons LB1 à LB10
+Lire le marquage et utiliser la bonne grandeur
+
+
+5.1. Ce que décrit l’échelon LB
+Dans l’EN 207, le niveau LB associe une atténuation et une résistance à l’irradiation pour une plage
+spectrale et un mode d’émission. Le protecteur comprend le filtre et la monture. Les essais sont réalisés
+dans des conditions définies, notamment 5 s en continu ou 50 impulsions en régime pulsé. Le choix vise
+une exposition accidentelle.
+
+ Code      Mode                                                                  Durée indicative
+
+ D         Continu ou émission longue                                            t > 0, 25 s
+ I         Impulsions longues                                                    1 µs à 0, 25 s
+ R         Impulsions déclenchées, rapides                                       1 ns à 1 µs
+ M         Impulsions ultracourtes                                               t < 1 ns
+
+Les cas aux limites et les marquages combinés se vérifient avec le fabricant et l’édition de la norme
+employée.
+
+
+5.2. Grandeurs de départ
+
+                                              2
+                                                  d          Pmoy            Q
+                                     S=π              ED =          HI,R =
+                                                  2           S              S
+
+En unités SI, S est en m2 , ED en W/m2 et HI,R en J/m2 . Pour le mode M, la méthode utilise aussi la
+durée d’impulsion et la densité de puissance correspondante. Le diamètre retenu représente le plus petit
+faisceau susceptible d’atteindre le protecteur dans le scénario prévisible, avec la convention de mesure
+prescrite. Les corrections de diamètre, de profil et de répétition relèvent de la méthode complète de
+sélection.
+
+
+5.3. Lecture du marquage
+Exemple fictif : « 1030–1090 D LB6 + R LB7 ». La protection indiquée couvre cette plage de
+longueurs d’onde, avec un niveau D LB6 et un niveau R LB7. La vérification porte également sur la
+monture, le fabricant, la conformité et la notice. Références : [3], [4] et [5].
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                        12
+LUBECO | RÉVISIONS PCSL                                                               Calculs et sécurité laser
+
+
+5.4. Tableau complété jusqu’à LB10
+Plage : 315 < λ ≤ 1400 nm, donc notamment 1064 nm.
+Valeurs de base D et I/R du tableau des échelons EN 207, converties en cm2 pour retrouver les unités
+de la fiche initiale. Les corrections de sélection s’appliquent avant de conclure sur un protecteur.
+
+
+                                       Échelon    D : W/cm2      I/R : J/cm2
+
+                                          LB1           0,01          0,000 005
+                                          LB2             0,1          0,000 05
+                                          LB3              1            0,000 5
+                                          LB4             10              0,005
+                                          LB5            100               0,05
+                                          LB6          1 000                0,5
+                                          LB7        10 000                  5
+                                          LB8       100 000                 50
+                                          LB9      1 000 000               500
+                                         LB10     10 000 000             5 000
+
+
+Repères équivalents en unités SI
+
+                                  LB1 : ED = 100 W/m2 ,     HI,R = 0, 05 J/m2
+                                 LB10 : ED = 1011 W/m2 ,        HI,R = 5 × 107 J/m2
+
+Lecture : la valeur à comparer, une fois corrigée selon la méthode EN 207, doit être couverte par
+l’échelon retenu. Une valeur entre deux échelons conduit à l’échelon supérieur.
+
+   Correction de la fiche initiale : les colonnes D et R ont été remplacées. En LB1, les valeurs
+   de base sont 0,01 W/cm2 et 0,000 005 J/cm2 . Une simple prolongation des anciennes colonnes
+   aurait conservé leur erreur.
+
+Source des valeurs : [5], colonnes D et I/R pour 315–1400 nm. Le mode M possède sa propre colonne.
+Le tableau ci-dessus sert de repère ; le calcul complet et la notice du protecteur déterminent le choix
+final.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                             13
+LUBECO | RÉVISIONS PCSL                                                              Calculs et sécurité laser
+
+
+5.5. Répétition et validation du choix
+Pour un laser pulsé, l’analyse porte sur l’énergie par impulsion et sur la puissance moyenne. La
+méthode de sélection EN 207 tient aussi compte de la répétition et des conditions d’essai. Le fabricant
+du protecteur peut établir le niveau à partir des paramètres complets : longueur d’onde, puissance,
+énergie, durée et fréquence des impulsions, diamètre minimal accessible et profil du faisceau. Exercice
+de lecture du tableau, valeurs déjà corrigées :
+
+    • Une grandeur D à comparer de 250 W/cm2 dépasse LB5 (100) et est couverte par LB6 (1000).
+
+    • Une grandeur R à comparer de 0,8 J/cm2 dépasse LB6 (0,5) et est couverte par LB7 (5).
+
+Pour cet exercice, on recherche donc les deux exigences D LB6 et R LB7 dans la plage spectrale
+concernée.
+
+
+
+Corrections apportées aux fiches
+
+ Sujet                     Correction principale
+
+ Échelons LB               Remplacement des valeurs D et R et prolongement jusqu’à LB10. Distinction
+                           entre valeurs de base et sélection complète.
+ VLE       1050–1400       Seuil court corrigé à 5 × 10−2 CC CE J/m2 . Domaines de durée précisés.
+ nm
+ VLE longues               Révision des limites thermiques et photochimiques ; distinction des sources
+                           ponctuelles et étendues.
+ Facteurs                  Ajout de CC et de T2 ; parenthèses explicites dans les puissances de 10.
+ DNDO                      Formule de la photo conservée avec son modèle de propagation ; origine, profil
+                           et angle total explicités.
+ Galvo                     Durée liée au scénario ; prise en compte de l’énergie interceptée, des impulsions
+                           de la source et de l’arrêt du balayage.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                            14
+LUBECO | RÉVISIONS PCSL                                                           Calculs et sécurité laser
+
+
+Références et documents regroupés
+Références consultées le 31 octobre 2026
+
+    1. Légifrance. Décret n° 2010-750 du 2 juillet 2010, relatif à la protection des travailleurs contre
+       les risques dus aux rayonnements optiques artificiels ; annexe II et cadre du Code du travail.
+       https://www.legifrance.gouv.fr/loda/id/JORFTEXT000022424491/
+
+    2. Directive 2006/25/CE, annexe II. Tableaux 2.2 et 2.3 : limites oculaires ; 2.5 : coefficients
+       ; 2.6 : répétition. Texte et tableaux consultés dans la version allemande officielle diffusée par la
+       Gewerbeaufsicht Baden-Württemberg, version 01/2022, pages 16–22.
+       https://gewerbeaufsicht.baden-wuerttemberg.de/documents/20121/61760/2_1_19.pdf
+
+    3. AFNOR. NF EN 207, édition de mai 2017 : protection individuelle de l’œil, filtres et protecteurs
+       contre les rayonnements laser. Notice de périmètre et guide de choix de l’annexe B.
+       Notice NF EN 207 sur le site AFNOR
+
+    4. Laservision et Lasermet. Explications du marquage EN 207, des modes D/I/R/M et des
+       essais de résistance.
+       https://www.uvex-laservision.de/en/laser-safety/laser-safety-standards/
+       Lasermet : marquage EN 207 et protections oculaires
+
+    5. Université d’Innsbruck, physique expérimentale. Introduction to Laser Safety Goggles,
+       tableau des échelons EN 207 : colonnes D et I/R utilisées pour le tableau LB.
+       Université d’Innsbruck : tableau et tutoriel EN 207
+
+Les cinq documents de départ
+
+    • Tableaux_Reglementaires_VLE_Laser (3).pdf
+
+    • Fiche_Calcul_Divergence_M2-v3.pdf
+
+    • Guide_Complet_DNDO_Laser.pdf
+
+    • Guide_Securite_Laser_Galvo.pdf
+
+    • Fiche_Revision_Echelons_LB.pdf
+
+La photo fournie a servi de modèle typographique pour les équations. Ce cahier reprend les thèmes des
+cinq fiches dans une rédaction harmonisée et corrigée.
+
+
+
+
+Édition regroupée et corrigée | 31 octobre 2026                                                         15
+

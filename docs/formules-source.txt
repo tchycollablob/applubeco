@@ -1,0 +1,62 @@
+Formules Fondamentales et Synthèse : Sécurité
+Laser
+Ce document synthétise les formules clés de caractérisation des lasers impulsionnels ainsi que leur
+articulation avec les concepts réglementaires de LEA, EMP et VLE.
+
+
+
+
+1. Caractérisation de la Source (Vos Trois Formules)
+Ces équations permettent de calculer les caractéristiques physiques brutes de votre faisceau laser impulsionnel
+:
+
+Énergie par impulsion : Quantité d'énergie (Joules) contenue dans un unique flash laser.
+
+  E = Pmoy / f
+Unités : E en Joules [J], Pmoy (Puissance moyenne) en Watts [W], f (Fréquence) en Hertz [Hz].
+
+Puissance de crête théorique : Puissance maximale atteinte au sommet de l'impulsion.
+
+  Pcrête = E / t
+Unités : Pcrête en Watts [W], E en Joules [J], t (Durée de l'impulsion) en secondes [s] (souvent en ns ou µs).
+
+Énergie totale délivrée : Énergie cumulée sur toute la durée de l'exposition.
+
+  Etotale = Pmoy × Texposition
+Unités : Etotale en Joules [J], Pmoy en Watts [W], Texposition (Temps total de tir ou de clignement) en secondes
+[s].
+
+
+
+
+2. Le Lien Crucial avec la Sécurité et le LEA
+Vos formules décrivent la puissance totale du laser. Cependant, pour déterminer si le laser est dangereux
+(calcul de la LEA - Limite d'Émission Accessible), la norme NF EN 60825-1 impose de simuler ce qui entre
+réellement dans l'œil humain :
+
+• Le Diaphragme de 7 mm : On calcule uniquement la fraction d'énergie passant à travers une pupille
+théorique de 7 mm (à une distance donnée, ex: 100 ou 200 mm).
+
+• Faisceau fin (< 7 mm) : 100% de l'énergie entre dans la pupille. Vos calculs bruts (E ou Pmoy) correspondent
+directement aux valeurs à comparer avec les limites de classe.
+
+• Faisceau large (> 7 mm) : Seule une fraction k traverse le diaphragme (LEA = E × k). C'est la géométrie du
+faisceau (divergence) qui dicte ce facteur.
+3. Synthèse des Unités et Concepts (LEA vs EMP / VLE)
+
+Concept                        Unité (Continu)             Unité                           Définition simplifiée
+                                                           (Impulsionnel)
+
+LEA                            Watt [W]                    Joule [J]                       Ce qui sort de la machine et traverse
+(Limite d'Émission                                                                         un diaphragme de 7 mm.
+Accessible)
+
+EMP / VLE                      Watt par m²                 Joule par m² [J/m²]             Ce que l'œil ou la peau peut recevoir
+(Exposition Max /              [W/m²]                                                      sans dommage biologique (densité).
+Valeur Limite)
+
+
+
+
+     This is for informational purposes only. For medical advice or diagnosis, consult a professional. AI responses may include mistakes.
+

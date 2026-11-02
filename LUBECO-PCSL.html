@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#132f31"><meta name="apple-mobile-web-app-capable" content="yes"><title>LUBECO · Assistant PCSL</title><style>@font-face{font-family:system;src:local('Arial')}*{box-sizing:border-box}body{margin:0;background:#f3f4ef;color:#193735;font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.55}header{height:90px;border-bottom:1px solid #dce1d9;display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,20px);background:#f9faf6}.brand{display:flex;align-items:center;gap:13px;color:inherit;text-decoration:none;font-weight:800;font-size:21px;letter-spacing:2px}.brand small{display:block;font-size:9px;font-weight:500;letter-spacing:2.5px}.logo{width:42px;height:45px;background:#193735;color:#f3f4ef;display:grid;place-content:center;border-radius:10px;position:relative;font-size:28px}.logo span{position:absolute;color:#b4de69;right:5px;top:5px}.connection{font-size:11px;background:#e9efdF;padding:7px 12px;border-radius:30px;color:#42642f}main{max-width:1280px;padding:0 40px;margin:auto}.intro{padding:49px 0 32px;position:relative}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:750;color:#64816b;margin:0 0 12px}h1{font-size:clamp(34px,4.5vw,54px);font-weight:550;letter-spacing:-2px;line-height:1.12;margin:0 0 20px}h1 em{font-style:normal;color:#6f8769}.intro>p:last-child{color:#728078}.intro:after{content:'✳';font-size:140px;color:#d8e1ce;position:absolute;right:7%;top:15px}nav{display:flex;gap:26px;border-bottom:1px solid #d6ddd2;margin-bottom:28px}button,input,select{font:inherit}button{cursor:pointer}nav button{border:0;background:none;color:#8b978c;padding:15px 0;border-bottom:3px solid transparent;font-size:10px;display:flex;gap:9px;align-items:center}nav span{font-size:13px}nav button.active{border-color:#264735;color:#193735}.layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.panel{background:#fff;border:1px solid #e0e5db;border-radius:15px;padding:28px;min-width:0}.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}h2{font-size:21px;font-weight:600;letter-spacing:-.6px;margin:0 0 9px}h3{font-size:16px}p{margin-top:0}.step{color:#b5c3ab;border:1px solid #e1e8dc;border-radius:50%;padding:6px 11px}.notice{background:#f1f4ea;padding:13px 15px;border-left:3px solid #a7c679;border-radius:3px;font-size:12px;color:#607258;margin-bottom:23px}label{display:block;color:#3c5149;font-size:12px;font-weight:600}input,select{width:100%;border:1px solid #dae1d5;background:#fcfdf9;border-radius:7px;padding:11px;color:#193735;min-width:0;margin-top:7px;height:43px}input:focus,select:focus{outline:2px solid #91b56a;outline-offset:1px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:19px 18px;margin:20px 0}.quantity{display:flex;gap:5px}.quantity input{flex:1;width:65%}.quantity select{width:77px;padding:8px 4px}.field small{font-size:10px;font-weight:400;color:#839080;display:block;margin-top:4px}.full{margin-bottom:18px}.segmented{display:flex;padding:4px;background:#edf1e7;border-radius:9px;gap:4px}.segmented label{padding:9px;flex:1;text-align:center;border-radius:6px;cursor:pointer}.segmented label:has(input:checked){background:#fff;box-shadow:0 1px 4px #20301b16}.segmented input{width:auto;height:auto;margin:0 5px 0 0;accent-color:#46673b}.hint{font-size:11px;color:#7a8777;line-height:1.65}.primary{background:#173d36;color:white;border:0;border-radius:8px;padding:14px 18px;width:100%;text-align:left;font-weight:550;display:flex;justify-content:space-between}.primary:hover{background:#2d5243}.primary span{color:#c7e69c}.saved{text-align:center;color:#8a9585;font-size:10px;margin:12px 0 0}.empty{text-align:center;padding:75px 10px 90px;color:#879581}.empty>span{font-size:62px;color:#b1c49b}.empty h3{color:#405d4c}.actions{display:flex;gap:10px;border-top:1px solid #edf0e7;padding-top:20px;margin-top:24px}.actions button{background:none;border:1px solid #d9e1d2;color:#526b48;border-radius:6px;padding:9px 12px;font-size:11px}.actions button:disabled{opacity:.4;cursor:default}.result-hero{background:#173d36;color:#fff;border-radius:10px;padding:22px;margin-bottom:16px}.result-hero small{color:#b6cdad;font-size:10px;letter-spacing:1.3px}.result-hero strong{display:block;font-size:37px;letter-spacing:-1px;font-weight:500;margin:8px 0}.result-hero p{font-size:11px;color:#c7d7c2;margin:0}.metric{padding:16px 0;border-bottom:1px solid #e9eee3}.metric h3{margin:0 0 6px;font-size:12px;color:#75816e;font-weight:500}.metric strong{font-size:21px;font-weight:550}.metric p{font-size:11px;color:#7d8976;margin:6px 0 0}.metric select{width:auto;height:30px;padding:3px;font-size:11px;margin-left:8px}.metric code{font-size:11px;display:block;margin-top:7px;color:#546d49;white-space:normal}details{border-bottom:1px solid #e5eadd;padding:16px 0}summary{cursor:pointer;font-weight:600}details p{color:#6a7b61;font-size:12px;margin:12px 0}details code{display:block;padding:12px;background:#f0f4e9;white-space:normal}#error,.warning{font-size:12px;color:#846223;background:#fcf4df;border-radius:6px;padding:13px;margin:14px 0}#error:empty{display:none}.hidden{display:none!important}#galvo,#guide{grid-column:1/-1}footer{display:flex;justify-content:space-between;gap:15px;padding:35px 0;color:#8c9785;font-size:10px}footer b{color:#7d9c55}button:focus-visible,summary:focus-visible{outline:2px solid #739953;outline-offset:3px}@media(max-width:800px){main{padding:0 18px}.intro{padding-top:30px}.intro:after{display:none}.intro>p:last-child{font-size:12px}.layout{grid-template-columns:1fr}.panel{padding:22px}nav{gap:0;justify-content:space-between}nav span{font-size:11px}nav button{gap:5px}header{height:73px}.results{display:none}.results.mobile-visible{display:block}footer{flex-direction:column}.fields{gap:15px 12px}h2{font-size:19px}.options{grid-template-columns:1fr}}@media print{header,nav,#source,#galvo,#guide,.actions,footer{display:none!important}.layout{display:block}.results{display:block!important}body,.panel{background:white}main{padding:0}.panel{border:0}.result-hero{color:black;background:#eee}.result-hero p,.result-hero small{color:black}}
+</style></head>
+<body><header><a class="brand" href="#"><span class="logo">L<span>∕</span></span><span>LUBECO<small>ASSISTANT PCSL</small></span></a><span class="connection" id="connection">● Local</span></header>
+<main><section class="intro"><p class="eyebrow">L’ESSENTIEL, SUR LE TERRAIN</p><h1>Votre faisceau.<br><em>Les bons repères.</em></h1><p>Des données fabricant aux calculs de protection.<br>Vos unités, vos paramètres, sans connexion.</p></section>
+<nav aria-label="Sections"><button class="active" data-tab="source">01 <span>Source laser</span></button><button data-tab="results">02 <span>Résultats</span></button><button data-tab="galvo">03 <span>Balayage</span></button><button data-tab="guide">04 <span>Formules</span></button></nav>
+<div class="layout"><section id="source" class="panel tab-panel"><div class="section-heading"><div><p class="eyebrow">PARAMÈTRES FABRICANT</p><h2>Caractériser la source</h2></div><span class="step">01</span></div><div class="notice">Profil uniforme, faisceau circulaire divergent. Durée d’exposition, divergence fabricant et géométrie de l’ouverture sont facultatives. Les valeurs après l’optique et la convention de diamètre doivent correspondre au scénario.</div>
+<form id="laser-form"><label class="full">Nom du scénario<input id="scenario" maxlength="100" placeholder="Ex. Atelier · laser de marquage"></label><div class="segmented full"><label><input type="radio" name="mode" value="pulsed" checked> Impulsionnel</label><label><input type="radio" name="mode" value="cw"> Continu</label></div><div id="fields" class="fields"></div><div class="fields options"><label>Origine de la divergence<select id="phiMode"><option value="derived">Calculer avec M² et diamètre au col</option><option value="manual">Valeur fabricant (facultative)</option></select></label><label>Modèle de propagation<select id="model"><option value="linear">Linéaire · d = a + φz</option><option value="quadratic">Au col · d² = d₀² + (φz)²</option></select></label></div><p class="hint">α est l’angle apparent de la source, distinct de la divergence φ. La durée d’exposition dépend du scénario ; 0,25 s n’est pas un réflexe de protection en infrarouge.</p><div id="error" role="alert"></div><button class="primary" type="submit">Calculer les repères <span>↗</span></button><p class="saved" id="saved">Saisie conservée uniquement sur cet appareil.</p></form></section>
+<section id="results" class="panel tab-panel results"><div class="section-heading"><div><p class="eyebrow">VOTRE ÉVALUATION</p><h2>Résultats du scénario</h2></div><span class="step">02</span></div><div id="result-content" aria-live="polite"><div class="empty"><span>◎</span><h3>Tout commence par la source.</h3><p>Renseignez vos paramètres pour afficher les calculs et leurs hypothèses.</p></div></div><div class="actions"><button id="export" disabled>↓ Exporter le bilan</button><button id="reset">Réinitialiser</button></div></section>
+<section id="galvo" class="panel tab-panel hidden"><p class="eyebrow">BALAYAGE GALVO</p><h2>Du motif au passage</h2><p>Passage centré, rectiligne, à vitesse constante. Les ralentissements et l’arrêt des miroirs demandent un scénario distinct.</p><form id="galvo-form"><div id="galvo-fields" class="fields"></div><button class="primary">Calculer le balayage ↗</button></form><div id="galvo-results" aria-live="polite"></div></section>
+<section id="guide" class="panel tab-panel hidden"><p class="eyebrow">COMPRENDRE LES CALCULS</p><h2>Les formules, expliquées.</h2><div id="formula-list"></div><div class="notice">Sources : « Formules fondamentales et synthèse : sécurité laser », p. 1–2 ; « LUBECO — Calculs et sécurité laser », édition du 31 octobre 2026, p. 2–15. Les extraits fournis ne remplacent pas les tableaux complets des référentiels cités.</div><p>Les textes des deux documents sont archivés dans le dossier docs du projet pour tracer la transcription.</p></section></div>
+<footer><span>LUBECO <b>∕</b> Calculs & sécurité laser</span><span id="offline-status">Préparation du mode hors ligne…</span></footer></main><script>// Formules transcrites des documents utilisateur. Toutes les entrées internes sont en SI.
+const units = {
+  wavelength: {nm:1e-9,'µm':1e-6,m:1}, power:{mW:1e-3,W:1,kW:1e3},
+  frequency:{Hz:1,kHz:1e3,MHz:1e6}, time:{s:1,ms:1e-3,'µs':1e-6,ns:1e-9,ps:1e-12},
+  length:{m:1,cm:1e-2,mm:1e-3,'µm':1e-6}, angle:{rad:1,mrad:1e-3,'°':Math.PI/180},
+  energy:{J:1,mJ:1e-3,'µJ':1e-6}, irradiance:{'W/m²':1,'W/cm²':1e4}, fluence:{'J/m²':1,'J/cm²':1e4}
+};
+function convert(value, from, to, kind) { return value*units[kind][from]/units[kind][to]; }
+const area = d => Math.PI*(d/2)**2;
+function factors(nm, alpha=1.5) {
+  return {ca:nm<700?1:nm<1050?10**(.002*(nm-700)):5,
+    cb:nm<=450?1:10**(.02*(nm-450)),cc:nm<=1150?1:nm<1200?10**(.018*(nm-1150)):8,
+    ce:alpha<=1.5?1:alpha<=100?alpha/1.5:alpha**2/150,
+    t2:alpha<=1.5?10:alpha>=100?100:10*10**((alpha-1.5)/98.5)};
+}
+// Résultat exprimé en J/m² ; les limites d'éclairement sont multipliées par t.
+// Aux frontières, on retient le minimum des expressions adjacentes disponibles.
+function vle(nm,t,alpha=1.5) {
+  nm=Number(nm.toPrecision(12));t=Number(t.toPrecision(12));
+  if (!(nm>=180 && nm<=1e6 && t>=1e-9 && t<=30000 && alpha>0)) return null;
+  const {ca,cb,cc,ce}=factors(nm,alpha), limits=[];
+  const add=(condition,value)=>{if(condition) limits.push(value);};
+  const uv=[40,60,100,160,250,400,630,1000,1600,2500,4000,6300];
+  if(t<=10){
+    add(nm<=302,30);
+    if(nm>=303&&nm<=314&&Number.isInteger(nm)) limits.push(Math.min(uv[nm-303],5600*t**.25));
+    add(nm>=315&&nm<=400,5600*t**.25);
+    add(nm>=400&&nm<=700&&t<=18e-6,.005*ce);
+    add(nm>=400&&nm<=700&&t>=18e-6,18*t**.75*ce);
+    add(nm>=700&&nm<=1050&&t<=18e-6,.005*ca);
+    add(nm>=700&&nm<=1050&&t>=18e-6,18*t**.75*ca*ce);
+    add(nm>=1050&&nm<=1400&&t<=50e-6,.05*cc*ce);
+    add(nm>=1050&&nm<=1400&&t>=50e-6,90*t**.75*cc*ce);
+    for(const [lo,hi] of [[1400,1500],[1800,2600]]){
+      add(nm>=lo&&nm<=hi&&t<=1e-3,1000);
+      add(nm>=lo&&nm<=hi&&t>=1e-3,5600*t**.25);
+    }
+    add(nm>=1500&&nm<=1800,10000);
+    add(nm>=2600&&t<=1e-7,100);
+    add(nm>=2600&&t>=1e-7,5600*t**.25);
+  }
+  if(t>=10){
+    add(nm<=302,30);
+    if(nm>=303&&nm<=314&&Number.isInteger(nm)) limits.push(uv[nm-303]);
+    add(nm>=315&&nm<=400,1e4);
+    // Les extraits ne permettent pas de traiter les sources étendues longues.
+    if(alpha<1.5){
+      add(nm>=400&&nm<=700,10*t);
+      add(nm>=700&&nm<=1400,10*ca*cc*t);
+    }
+    add(nm>=400&&nm<=600,t<=100?100*cb:cb*t);
+    add(nm>=1400,1000*t);
+    if(nm>=400&&nm<=1400&&alpha>=1.5) return null;
+  }
+  return limits.length?Math.min(...limits):null;
+}
+function divergence(lambda,d,m2){return 4*m2*lambda/(Math.PI*d);}
+function dndo(quantity,limit,d,phi,model='linear'){
+  if(![quantity,limit,d,phi].every(x=>Number.isFinite(x)&&x>0)) return null;
+  const critical2=4*quantity/(Math.PI*limit);
+  return model==='quadratic'?Math.sqrt(Math.max(0,critical2-d*d))/phi:Math.max(0,(Math.sqrt(critical2)-d)/phi);
+}
+function lb(value,mode){
+  if(!(value>0&&Number.isFinite(value))) return null;
+  const base=mode==='D'?100:.05;
+  for(let n=1;n<=10;n++) if(value<=base*10**(n-1)*(1+1e-12)) return n;
+  return '>10';
+}
+function calculate(p){
+  const required=['lambda','power','diameter'];
+  if(required.some(k=>!Number.isFinite(p[k])||p[k]<(k==='distance'?0:Number.MIN_VALUE))) throw Error('Renseignez des valeurs strictement positives (distance ≥ 0).');
+  if(p.pulsed&&(!(p.frequency>0)||!(p.pulse>0)||p.frequency*p.pulse>1)) throw Error('Fréquence et durée positives requises ; f × τ doit être ≤ 1.');
+  if(!(p.alpha>0&&Number.isFinite(p.alpha))) throw Error('L’angle apparent α doit être positif et fini.');
+  if(p.pulsed&&!Number.isNaN(p.groups)&&!(p.groups>=1&&Number.isInteger(p.groups))) throw Error('N doit être un nombre entier de groupes ≥ 1, ou rester vide.');
+  const missing=v=>v==null||Number.isNaN(v);
+  for(const key of ['exposure','aperture','distance']){
+    if(!missing(p[key])&&(!Number.isFinite(p[key])||(key==='distance'?p[key]<0:p[key]<=0))) throw Error('Les valeurs optionnelles renseignées doivent être positives (distance ≥ 0).');
+  }
+  const manual=p.phiMode==='manual'&&!missing(p.phi);
+  if(manual&&!(p.phi>0&&Number.isFinite(p.phi))) throw Error('La divergence totale doit être positive.');
+  if(!manual&&!missing(p.m2)&&!(p.m2>=1&&Number.isFinite(p.m2))) throw Error('Le facteur M² doit être supérieur ou égal à 1.');
+  const phi=manual?p.phi:missing(p.m2)?null:divergence(p.lambda,p.diameter,p.m2);
+  const phiSource=manual?'manual':phi===null?'missing':'derived';
+  const nm=Number((p.lambda*1e9).toPrecision(12)),s=area(p.diameter),q=p.pulsed?p.power/p.frequency:null;
+  const h=missing(p.exposure)?null:vle(nm,p.exposure,p.alpha), hp=p.pulsed?vle(nm,p.pulse,p.alpha):null;
+  const dz=missing(p.distance)?null:p.distance===0?p.diameter:phi===null?null:p.model==='linear'?p.diameter+phi*p.distance:Math.hypot(p.diameter,phi*p.distance);
+  const k=missing(p.aperture)||dz===null?null:Math.min(1,(p.aperture/dz)**2);
+  const cumulative=h===null?null:dndo(p.power*p.exposure,h,p.diameter,phi,p.model);
+  const single=hp===null?null:dndo(q,hp,p.diameter,phi,p.model);
+  const n=p.groups,cp=p.pulsed&&n>=1? n**(-.25):null;
+  const thermal=hp!==null&&cp!==null?dndo(q,hp*cp,p.diameter,phi,p.model):null;
+  const distances=[cumulative,single,thermal].filter(x=>x!==null);
+  return {phi,phiSource,s,q,peak:q===null?null:q/p.pulse,total:missing(p.exposure)?null:p.power*p.exposure,h,hp,cp,
+    irradiance:p.power/s,fluence:q===null?null:q/s,k,accessiblePower:k===null?null:p.power*k,
+    accessibleEnergy:q===null||k===null?null:q*k,cumulative,single,thermal,
+    dndo:distances.length?Math.max(...distances):null,
+    lbD:nm>315&&nm<=1400?lb(p.power/s,'D'):null,
+    lbPulse:nm>315&&nm<=1400&&p.pulsed&&p.pulse>=1e-9&&p.pulse<=.25?lb(q/s,'R'):null,
+    factors:factors(nm,p.alpha)};
+}
+
+const $=id=>document.getElementById(id);
+const specs=[
+ ['lambda','Longueur d’onde','wavelength',1064,'nm','λ · Valeur après l’optique'],
+ ['power','Puissance moyenne','power',1,'W','P · Puissance optique, pas électrique'],
+ ['diameter','Diamètre de référence','length',2,'mm','a / D₀ · Au col si calcul avec M²'],
+ ['m2','Qualité du faisceau M²',null,1.5,null,'M² est utilisé directement, sans le recarrer'],
+ ['frequency','Fréquence des impulsions','frequency',20,'kHz','f · Fréquence optique de la source','pulse-field'],
+ ['pulse','Durée d’une impulsion','time',100,'ns','τ · Durée du flash laser','pulse-field'],
+ ['exposure','Durée d’exposition (optionnel)','time','','s','T · Nécessaire pour la VLE cumulée et l’énergie totale'],
+ ['alpha','Angle apparent α','angle',1,'mrad','Dimension de la source vue par l’œil'],
+ ['phi','Divergence fabricant (optionnel)','angle','','mrad','φ · Si vide, calcul automatique avec λ, D₀ et M²','manual-field'],
+ ['aperture','Diamètre de l’ouverture (optionnel)','length','','mm','D · Seulement pour l’émission accessible et le galvo'],
+ ['distance','Distance à l’ouverture (optionnel)','length','','m','z · Seulement pour l’émission accessible ; 0 = origine'],
+ ['groups','Nombre N de groupes thermiques',null,'',null,'Optionnel · Comptage validé selon Tmin','pulse-field']
+];
+const galvoSpecs=[['path','Longueur totale du motif','length',40,'mm','L · Périmètre parcouru'],['motif','Fréquence du motif','frequency',100,'Hz','fₘ · Distincte de la fréquence laser']];
+function field(s){const [id,label,kind,val,unit,hint,cls='']=s;return `<label class="field ${cls}" id="field-${id}">${label}<div class="quantity"><input id="${id}" type="text" inputmode="decimal" value="${val}" autocomplete="off" aria-label="${label}">${kind?`<select id="${id}-unit" aria-label="Unité : ${label}">${Object.keys(units[kind]).map(u=>`<option${u===unit?' selected':''}>${u}</option>`).join('')}</select>`:''}</div><small>${hint}</small></label>`;}
+$('fields').innerHTML=specs.map(field).join('');$('galvo-fields').innerHTML=galvoSpecs.map(field).join('');
+const parse=v=>{const t=v.trim().replace(',','.');return t===''?NaN:Number(t);};
+function read(id,kind){const v=parse($(id).value);return kind?v*units[kind][$(id+'-unit').value]:v;}
+function params(){const p={};for(const [id,,kind] of specs)p[id]=read(id,kind);p.alpha*=1000;p.pulsed=document.querySelector('[name=mode]:checked').value==='pulsed';p.model=$('model').value;p.phiMode=$('phiMode').value;return p;}
+function fmt(v){if(v===null||v===undefined||!Number.isFinite(v))return 'Non déterminé';if(v===0)return '0';return Math.abs(v)<.001||Math.abs(v)>=1e7?v.toExponential(3).replace('.',','):new Intl.NumberFormat('fr-FR',{maximumSignificantDigits:5}).format(v);}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let last=null,outputValues=[];
+function metric(title,value,kind,unit,formula,explanation){const index=outputValues.push({value,kind})-1;return `<div class="metric"><h3>${title}</h3><strong data-value="${index}">${fmt(value===null?null:value/units[kind][unit])}</strong><select data-output="${index}" aria-label="Unité du résultat ${title}">${Object.keys(units[kind]).map(u=>`<option${u===unit?' selected':''}>${u}</option>`).join('')}</select><code>${formula}</code><p>${explanation}</p></div>`;}
+function showTab(tab){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));for(const id of ['source','results','galvo','guide']){$(id).classList.toggle('hidden',tab==='source'?id==='galvo'||id==='guide':id!==tab);$('results').classList.toggle('mobile-visible',tab==='results');}}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+function visibility(){const pulse=document.querySelector('[name=mode]:checked').value==='pulsed';document.querySelectorAll('.pulse-field').forEach(e=>e.classList.toggle('hidden',!pulse));$('field-phi').classList.toggle('hidden',$('phiMode').value!=='manual');$('field-m2').classList.remove('hidden');}
+function save(){const data={};document.querySelectorAll('input,select').forEach(e=>{if(e.id&&!e.dataset.output)data[e.id]=e.value;});data.mode=document.querySelector('[name=mode]:checked').value;try{localStorage.setItem('lubeco-v1',JSON.stringify(data));$('saved').textContent='Saisie enregistrée sur cet appareil · aucun envoi de données.';}catch{$('saved').textContent='Stockage indisponible : saisie conservée uniquement dans cette session.';}}
+try{const data=JSON.parse(localStorage.getItem('lubeco-v1')||'null');if(data){Object.entries(data).forEach(([id,v])=>{if($(id))$(id).value=v;});document.querySelectorAll('[name=mode]').forEach(e=>e.checked=e.value===data.mode);}}catch{}
+for(const [id,,kind] of [...specs,...galvoSpecs]){if(!kind)continue;const select=$(id+'-unit');select.dataset.previous=select.value;select.addEventListener('change',()=>{const v=parse($(id).value);if(Number.isFinite(v))$(id).value=Number(convert(v,select.dataset.previous,select.value,kind).toPrecision(12));select.dataset.previous=select.value;});}
+function render(p,r){let html=`<div class="warning">Évaluation partielle · aucune conclusion de conformité. ${p.pulsed?'Les sous-groupes et le regroupement Tmin doivent être vérifiés. N n’est pas déduit automatiquement de f × T.':''} ${p.alpha>=1.5?'Source étendue : certains domaines longs ne sont pas couverts.':''}</div>`;
+html+=`<div class="notice">Champs optionnels : sans durée T, la VLE cumulée et l’énergie totale ne sont pas déterminées. Sans diamètre ou distance d’ouverture, l’émission accessible reste indéterminée. La divergence est calculée avec λ, D₀ et M² si aucune valeur fabricant n’est renseignée.</div>`;
+html+=`<div class="result-hero"><small>DNDO · MODÈLE ${p.model==='linear'?'LINÉAIRE':'AU COL'} · PROFIL UNIFORME</small><strong>${fmt(r.dndo)}${r.dndo!==null?' m':''}</strong><p>Maximum des critères calculables ci-dessous. ${p.pulsed?'Distance partielle du train d’impulsions.':'Faisceau direct, pour la durée saisie.'}</p></div>`;
+html+=metric('Divergence totale φ',r.phi,'angle','mrad',r.phiSource!=='manual'?'φ = 2θ = 4 M² λ / (π D₀)':'φ = valeur totale du fabricant','M² caractérise la propagation. La divergence totale vaut deux fois le demi-angle. Cahier p. 7.');
+html+=metric('VLE oculaire · durée d’exposition',r.h,'fluence','J/m²','Hᵥₗₑ = minimum des limites disponibles pour λ, T et α','Valeur de l’extrait, en énergie surfacique ; Eᵥₗₑ = Hᵥₗₑ / T. Hors domaine : non déterminé. Cahier p. 3–6.');
+html+=metric('VLE équivalente en éclairement',r.h===null?null:r.h/p.exposure,'irradiance','W/m²','Eᵥₗₑ = Hᵥₗₑ / T','Conversion sur la durée saisie ; ne remplace pas le contrôle individuel des impulsions.');
+html+=metric('Éclairement à l’origine',r.irradiance,'irradiance','W/cm²','S = π(d/2)² ; E = P / S','Puissance par unité de surface, pour un disque uniforme. Cahier p. 2.');
+if(p.pulsed){html+=metric('Énergie par impulsion',r.q,'energy','mJ','Q = Pmoy / f','Énergie de chaque flash pour des impulsions identiques. Synthèse p. 1.');html+=metric('Puissance de crête théorique',r.peak,'power','kW','Pcrête = Q / τ','Approximation rectangulaire ; la forme temporelle réelle peut modifier la crête.');html+=metric('Fluence par impulsion',r.fluence,'fluence','J/cm²','Himp = Q / S','Énergie par unité de surface au diamètre de référence.');html+=metric('VLE d’une impulsion isolée',r.hp,'fluence','J/m²','Hᵥₗₑ(τ)','Limite avant une éventuelle correction thermique. Cahier p. 3–6.');}
+html+=metric('Énergie totale délivrée',r.total,'energy','J','Qtotal = Pmoy × T','Énergie émise pendant l’intervalle d’exposition. Synthèse p. 1.');
+html+=metric('Émission accessible · puissance',r.accessiblePower,'power','W','Paccessible = P × min(1, D² / d(z)²)',`Ouverture centrée, profil uniforme : ${r.k===null?'renseignez le diamètre et la distance à l’ouverture pour calculer la fraction interceptée.':'fraction interceptée '+fmt(100*r.k)+' %.'} Cette émission n’est pas une limite de classe LEA.`);
+if(p.pulsed)html+=metric('Émission accessible · énergie / impulsion',r.accessibleEnergy,'energy','mJ','Qaccessible = Q × k','Même géométrie que la puissance accessible.');
+html+=`<details open><summary>DNDO : détail des critères</summary><p>DNDO = max(0, (√(4X / (π Hlim)) − a) / φ), ou √max(0, 4X / (π Hlim) − a²) / φ au col. X = P × T ou Q. Cahier p. 8–9.</p><p>Cumul sur T : ${fmt(r.cumulative)} m<br>Impulsion isolée : ${fmt(r.single)} m<br>Cumul thermique : ${fmt(r.thermal)} m<br>Cp = N⁻⁰·²⁵ : ${fmt(r.cp)}</p><p>À 1064 nm, Tmin = 50 µs. Les groupes et intervalles pertinents ne sont pas déduits de ces seuls paramètres. Les profils gaussiens, la focalisation et les réflexions nécessitent une autre analyse.</p></details>`;
+html+=`<details open><summary>Protection oculaire · repères EN 207</summary><p>Base continue : ${r.lbD===null?'hors domaine':r.lbD==='>10'?'dépasse LB10':'D LB'+r.lbD}. ${p.pulsed?'Base impulsionnelle : '+(r.lbPulse===null?'hors domaine':r.lbPulse==='>10'?'dépasse LB10':(p.pulse>=1e-6?'I':'R')+' LB'+r.lbPulse)+'.':''}</p><p>Repères NON corrigés, pour 315 &lt; λ ≤ 1400 nm. D : seuil LB1 = 100 W/m² ; I/R : seuil LB1 = 0,05 J/m² ; chaque échelon multiplie par 10. Retenir l’échelon supérieur.</p><p>Le mode M, les corrections de profil, diamètre et répétition ne sont pas déterminés par ces extraits. Ces repères ne constituent pas une sélection de lunettes. Vérifier filtre, monture, plage spectrale et notice selon la méthode complète. Cahier p. 12–14.</p></details>`;
+html+=`<details><summary>LEA et facteurs : ce qui est déterminé</summary><p>La limite LEA réglementaire dépend de la classe, du temps de base et des conditions de mesure NF EN 60825-1. Les tableaux ne figurent pas dans les PDF : aucune limite de classe ou classe laser n’est calculée.</p><p>CA = ${fmt(r.factors.ca)} · CB = ${fmt(r.factors.cb)} · CC = ${fmt(r.factors.cc)} · CE = ${fmt(r.factors.ce)} · T₂ = ${fmt(r.factors.t2)} s.</p><p>L’ouverture de 7 mm est un repère visible/proche IR. Une ouverture différente peut être nécessaire dans les autres plages. L’angle α n’est pas la divergence.</p></details>`;
+$('result-content').innerHTML=html;$('export').disabled=false;
+}
+document.addEventListener('change',e=>{if(!e.target.matches('[data-output]'))return;const i=Number(e.target.dataset.output),o=outputValues[i];document.querySelector(`[data-value="${i}"]`).textContent=fmt(o.value===null?null:o.value/units[o.kind][e.target.value]);});
+$('laser-form').onsubmit=e=>{e.preventDefault();try{const p=params(),r=calculate(p);last={p,r,scenario:$('scenario').value};$('error').textContent='';render(p,r);save();showTab('results');}catch(err){$('error').textContent=err.message;}};
+let updateTimer;
+function updateResults(){visibility();save();try{const p=params(),r=calculate(p);last={p,r,scenario:$('scenario').value};$('error').textContent='';render(p,r);}catch(err){last=null;$('export').disabled=true;$('error').textContent=err.message;$('result-content').innerHTML='<div class="notice">Complétez les paramètres pour calculer un bilan à jour.</div>';}}
+document.querySelectorAll('#laser-form input,#laser-form select').forEach(e=>{e.addEventListener('change',updateResults);e.addEventListener('input',()=>{clearTimeout(updateTimer);last=null;$('export').disabled=true;updateTimer=setTimeout(updateResults,250);});});
+$('export').onclick=()=>{if(!last)return;const text=`LUBECO — bilan partiel PCSL\n${last.scenario}\n${new Date().toLocaleString('fr-FR')}\n\n${$('result-content').innerText}\n\nDonnées et résultats SI :\n${JSON.stringify(last,null,2)}`;const a=document.createElement('a'),url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));a.href=url;a.download='lubeco-bilan-pcsl.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$('reset').onclick=()=>{if(!confirm('Effacer les paramètres enregistrés sur cet appareil ?'))return;try{localStorage.removeItem('lubeco-v1');}catch{}location.reload();};
+$('galvo-form').onsubmit=e=>{e.preventDefault();try{const p=params();calculate(p);const path=read('path','length'),fm=read('motif','frequency');if(!(path>0&&fm>0&&Number.isFinite(path*fm)))throw Error('Longueur et fréquence du motif positives requises.');const v=path*fm,t=Number.isFinite(p.aperture)?(p.aperture+p.diameter)/v:null;let h=`<div class="notice">Calcul avec les paramètres actuels de la source. Enveloppe de passage ; borne supérieure d’énergie interceptée.</div>`;h+=`<div class="metric"><h3>Vitesse · v = L × fₘ</h3><strong>${fmt(v*1000)} mm/s</strong><p>Vitesse constante le long du motif. Cahier p. 10.</p></div>`;h+=metric('Durée de passage',t,'time','ms','tpassage = (D + d) / v','Du premier au dernier contact avec l’ouverture, dans le même plan.');h+=`<div class="metric"><h3>Nombre de passages estimé · N ≈ fₘ × T</h3><strong>${fmt(Number.isFinite(p.exposure)?fm*p.exposure:null)}</strong><p>La phase peut imposer un passage supplémentaire. Ce nombre ne remplace pas le comptage thermique N.</p></div>`;h+=metric('Exposition majorée par passage',t===null?null:p.power*t/area(p.aperture),'fluence','J/m²','Hₐ ≤ P × tpassage / Sₐ','Toute la puissance est supposée interceptée pendant tout le passage. Cahier p. 11.');if(p.pulsed)h+=`<p>Impulsions par passage : f × tpassage ≈ ${fmt(t===null?null:p.frequency*t)}. Le comptage exact dépend de la phase.</p>`;$('galvo-results').innerHTML=h;save();}catch(err){$('galvo-results').textContent=err.message;}};
+const formulas=[['Surface, éclairement et fluence','S = π(d/2)² ; E = P/S ; H = Q/S','La surface circulaire relie puissance et énergie à leur densité. Cahier p. 2.'],['Source impulsionnelle','Q = Pmoy/f ; Pcrête = Q/τ ; Qtotal = Pmoy × T','Ces calculs supposent des impulsions identiques ; la crête est théorique. Synthèse p. 1.'],['Divergence','w₀ = D₀/2 ; θ = M²λ/(πw₀) ; φ = 2θ','Utiliser λ et w₀ en mètres ; M² est directement le multiplicateur fabricant. Cahier p. 7.'],['VLE et rapport d’exposition','R = Hréelle/Hᵥₗₑ ou Eréel/Eᵥₗₑ','Comparer des grandeurs homogènes. R ≤ 1 satisfait uniquement le critère étudié. Les frontières retiennent la limite disponible la plus restrictive. Cahier p. 3–6.'],['Train d’impulsions','Cp = N⁻⁰·²⁵ ; Hlim,imp = Cp × Hᵥₗₑ(τ)','Évaluer impulsion isolée, énergie cumulée, groupes pertinents et correction thermique lorsqu’elle s’applique. Le comptage de N doit être justifié. Cahier p. 3.'],['DNDO linéaire','z = max(0, [√(4P/(πEᵥₗₑ)) − a] / φ)','Distance du faisceau direct pour un profil uniforme et d(z) = a + φz. Pour une impulsion, remplacer P par Q et Eᵥₗₑ par Hᵥₗₑ. Cahier p. 8.'],['DNDO depuis le col','z = √max(0, 4P/(πEᵥₗₑ) − d₀²) / φ','Le modèle d²(z) = d₀² + (φz)² exige une origine au col. Cahier p. 9.'],['Ouverture et émission accessible','k = min(1, D²/d(z)²) ; Paccessible = kP ; Qaccessible = kQ','Fraction géométrique d’un disque uniforme centré. Ce résultat doit être comparé à une limite LEA issue des tableaux normatifs absents. Synthèse p. 1–2.'],['Balayage galvo','v = Lfₘ ; tpassage = (D+d)/v ; Npassages ≈ fₘT ; Hₐ ≤ Ptpassage/Sₐ','Les unités de longueur doivent être identiques. La vitesse locale, la phase et le délai de coupure conditionnent le scénario. Cahier p. 10–11.'],['Échelons de base EN 207','D : 100 × 10^(LB−1) W/m² ; I/R : 0,05 × 10^(LB−1) J/m²','Sélectionner le premier seuil couvrant la densité. Domaine 315 < λ ≤ 1400 nm ; corrections complètes et mode M absents. Cahier p. 12–14.']];
+$('formula-list').innerHTML=formulas.map(([title,formula,help])=>`<details><summary>${title}</summary><code>${formula}</code><p>${help}</p></details>`).join('');
+function connection(){$('connection').textContent=navigator.onLine?'● Calcul local':'● Hors ligne';}connection();window.addEventListener('online',connection);window.addEventListener('offline',connection);visibility();
+$('offline-status').textContent='Version ordinateur autonome · fonctionnement hors ligne';
+</script></body></html>
